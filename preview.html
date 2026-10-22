@@ -332,13 +332,23 @@ textarea { margin-bottom: 12px; }
 
 </style>
   
+<style>/* Shared navigation keeps both journals within easy reach. */
+.tool-nav{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:20px 0 0;font-size:13px}
+.tool-nav a{padding:10px 16px;border:1px solid #d9d9c5;background:#e4e6cd;color:#677954;border-radius:22px;box-shadow:0 3px 10px #77665009;text-decoration:none;transition:transform .25s,background .25s}
+.tool-nav a:last-child{background:#f0dce3;color:#9a7183;border-color:#e4cdd7}
+.tool-nav a[aria-current=page]{box-shadow:inset 0 0 0 1px currentColor}
+.tool-nav a:hover{transform:translateY(-2px)}
+.tool-nav a:focus-visible{outline:3px solid #b28b9b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.tool-nav a{transition:none}}
+</style>
 </head>
 <body>
   <main class="app">
     <header class="page-header">
-      <a class="brand" href="./"><span class="brand-icon" aria-hidden="true">☾</span> 晚安小森 <span class="brand-en">SLEEP JOURNAL</span></a>
+      <a class="brand" href="sleep.html"><span class="brand-icon" aria-hidden="true">☾</span> 晚安小森 <span class="brand-en">SLEEP JOURNAL</span></a>
       <span class="local-badge">✿ 只属于你的睡眠手记</span>
     </header>
+<nav class="tool-nav" aria-label="工具导航"><a href="index.html">⌂ 首页</a><a href="sleep.html" aria-current="page">☾ 睡眠记录</a><a href="period.html">✿ 经期记录</a></nav>
     <section class="welcome">
       <div><span class="eyebrow">REST WELL, GROW SLOWLY</span><h1>好好睡觉，<br>也是在照顾自己<span>。</span></h1><p>把每一晚的休息，种成明天的小小能量。</p></div>
       <div class="moon-scene" aria-hidden="true"><span class="decor-leaf leaf-one"></span><span class="decor-leaf leaf-two"></span><div class="moon"></div><span class="scene-caption">今晚，也做个好梦</span></div>

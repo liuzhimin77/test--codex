@@ -15,9 +15,19 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 
 </style>
+<style>/* Shared navigation keeps both journals within easy reach. */
+.tool-nav{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:20px 0 0;font-size:13px}
+.tool-nav a{padding:10px 16px;border:1px solid #d9d9c5;background:#e4e6cd;color:#677954;border-radius:22px;box-shadow:0 3px 10px #77665009;text-decoration:none;transition:transform .25s,background .25s}
+.tool-nav a:last-child{background:#f0dce3;color:#9a7183;border-color:#e4cdd7}
+.tool-nav a[aria-current=page]{box-shadow:inset 0 0 0 1px currentColor}
+.tool-nav a:hover{transform:translateY(-2px)}
+.tool-nav a:focus-visible{outline:3px solid #b28b9b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.tool-nav a{transition:none}}
+</style>
 </head>
 <body><main class="app">
 <header><a class="brand" href="period.html"><span aria-hidden="true">✿</span> 花期手记 <small>BLOOM JOURNAL</small></a><span class="header-note">只在你的浏览器，安心记录</span></header>
+<nav class="tool-nav" aria-label="工具导航"><a href="index.html">⌂ 首页</a><a href="sleep.html">☾ 睡眠记录</a><a href="period.html" aria-current="page">✿ 经期记录</a></nav>
 <section class="hero"><div><span class="eyebrow">EVERY PHASE, WITH LOVE</span><h1>每一个阶段，<br>都值得被温柔照顾。</h1><p>听见身体的小小讯号，陪自己慢慢了解每个周期。</p></div><div class="decoration" aria-hidden="true"><i class="moon"></i><span class="flower">✿</span><span class="tiny-flower">✿</span></div></section>
 <div class="dashboard"><section class="card entry"><div class="heading"><span class="icon" aria-hidden="true">✿</span><div><h2>记录这一次花期</h2><p>为身体留下一份小小日记</p></div></div>
 <form id="period-form"><label for="start">经期第一天</label><input id="start" type="date" required><label for="duration">经期持续天数</label><div class="input-unit"><input id="duration" type="number" min="1" max="15" value="5" required><span>天</span></div>
