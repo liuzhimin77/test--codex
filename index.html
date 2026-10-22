@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f5ed">
+  <meta name="theme-color" content="#f3e9d8">
   <title>晚安小森 · 睡眠手记</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctext y='32' font-size='32'%3E🌙%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/ZCOOLKuaiLe-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -17,7 +18,7 @@
     </header>
     <section class="welcome">
       <div><span class="eyebrow">REST WELL, GROW SLOWLY</span><h1>好好睡觉，<br>也是在照顾自己<span>。</span></h1><p>把每一晚的休息，种成明天的小小能量。</p></div>
-      <div class="moon-scene" aria-hidden="true"><span class="star star-one">✦</span><span class="star star-two">✧</span><div class="moon">☾</div><span class="cloud">☁</span><span class="scene-caption">今晚，也做个好梦</span></div>
+      <div class="moon-scene" aria-hidden="true"><span class="decor-leaf leaf-one"></span><span class="decor-leaf leaf-two"></span><div class="moon"></div><span class="scene-caption">今晚，也做个好梦</span></div>
     </section>
     <div class="dashboard">
       <section class="card entry-card" aria-labelledby="entry-title">
@@ -39,11 +40,11 @@
       <div class="overview">
         <section class="card week-card" aria-labelledby="week-title">
           <div class="section-heading"><h2 id="week-title">这一周，睡得好吗？</h2><span id="week-range" class="pill"></span></div>
-          <div class="stats"><div><span class="stat-label">近 7 天平均睡眠</span><strong id="average">—<small> 小时</small></strong><span id="days-count" class="stat-detail">还没有睡眠记录</span></div><div class="little-plant" aria-hidden="true">🌱<span>休息，是生长的养分</span></div></div>
+          <div class="stats"><div><span class="stat-label">近 7 天平均睡眠</span><strong id="average">—<small> 小时</small></strong><span id="days-count" class="stat-detail">还没有睡眠记录</span></div><div class="little-plant" aria-hidden="true"><svg class="sprout" viewBox="0 0 80 80" fill="none"><path d="M40 68C43 49 43 34 35 23" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M39 42C17 44 13 29 15 18C32 17 44 25 39 42Z" fill="currentColor" opacity=".65"/><path d="M43 52C42 30 60 22 72 25C72 41 61 54 43 52Z" fill="currentColor" opacity=".85"/></svg><span>休息，是生长的养分</span></div></div>
           <div class="chart-wrap"><svg id="sleep-chart" viewBox="0 0 600 220" role="img" aria-labelledby="chart-title chart-description"><title id="chart-title">近七天睡眠时长折线图</title><desc id="chart-description">暂无数据</desc></svg></div>
           <p class="chart-note"><span class="legend-dot"></span>每日睡眠时长 <span>· 按起床日期合计，空缺表示未记录</span></p>
         </section>
-        <section class="advice-card" aria-live="polite"><span class="advice-icon" aria-hidden="true">✿</span><div><span class="eyebrow">小森的温柔提醒</span><h3 id="advice-title">从一晚好眠开始</h3><p id="advice-text">记下第一条睡眠，让小森陪你发现自己的休息节奏。</p><small>建议仅供成年人的日常参考，不替代医疗建议。</small></div></section>
+        <section class="advice-card" aria-live="polite"><span class="advice-icon" aria-hidden="true"><i class="decor-leaf"></i></span><div><span class="eyebrow">小森的温柔提醒</span><h3 id="advice-title">从一晚好眠开始</h3><p id="advice-text">记下第一条睡眠，让小森陪你发现自己的休息节奏。</p><small>建议仅供成年人的日常参考，不替代医疗建议。</small></div></section>
       </div>
     </div>
     <section class="card history-card" aria-labelledby="history-title"><div class="section-heading"><div><h2 id="history-title">梦乡足迹</h2><p>每一次休息，都值得被记住。</p></div><span id="record-count" class="pill" aria-live="polite">0 条记录</span></div><div id="empty-state"><span aria-hidden="true">☁</span><h3>这里，等着你的第一晚</h3><p>填下入睡和起床时间，开启你的睡眠手记。</p></div><ul id="record-list"></ul></section>
