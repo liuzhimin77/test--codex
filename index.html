@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>小事 · Todo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <span class="eyebrow">A LITTLE EVERY DAY</span>
+      <h1>小事<span>。</span></h1>
+      <p class="subtitle">把想做的事，慢慢变成做过的事。</p>
+    </header>
+    <section class="card" aria-label="待办清单">
+      <form id="todo-form">
+        <label class="sr-only" for="todo-input">新的待办事项</label>
+        <input id="todo-input" placeholder="接下来，想做点什么？" maxlength="200" autocomplete="off" required>
+        <button class="add-button" type="submit"><span aria-hidden="true">＋</span> 添加</button>
+      </form>
+      <div class="list-heading"><h2>我的待办</h2><span id="count" aria-live="polite">0 项待完成</span></div>
+      <ul id="todo-list" aria-label="待办事项"></ul>
+      <div id="empty-state"><span class="empty-icon" aria-hidden="true">✓</span><h3>给今天留一点期待</h3><p>添加第一件小事，从这里开始。</p></div>
+      <footer><span id="summary" aria-live="polite">慢慢来，每一步都算数。</span><span class="save-label">自动保存在此浏览器</span></footer>
+    </section>
+    <p id="notice" role="status"></p>
+    <p class="page-note">少一点忙乱，多一点从容。</p>
+  </main>
+</body>
+</html>
